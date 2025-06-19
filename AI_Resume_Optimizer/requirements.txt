@@ -1,12 +1,10 @@
 streamlit
+PyPDF2
 pandas
 numpy
 scikit-learn
-sentence-transformers
 python-docx
-pdfminer.six
+spacy
+transformers
+torch
 matplotlib
-seaborn
-nltk
-joblib
-textstat
