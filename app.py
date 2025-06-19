@@ -1,5 +1,8 @@
 import streamlit as st
 import os
+import sys
+import os
+sys.path.append(os.path.abspath('.'))
 
 from utils.resume_parser import parse_resume
 from utils.job_description_cleaner import clean_job_description
