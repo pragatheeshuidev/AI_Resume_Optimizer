@@ -1,6 +1,6 @@
 import streamlit as st
 import os
-from utils.resume_parser import parse_resume   
+from utils.resume_parser import parse_resume
 from job_description_cleaner import clean_job_description
 from similarity import calculate_similarity
 from resume_scorer import score_resume
