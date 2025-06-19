@@ -1,0 +1,48 @@
+📄 Sample Job Description
+Job Title: Data Analyst – AI & Business Intelligence
+Location: Bangalore, India (Hybrid)
+Experience: 0–2 Years
+Company: FuturoTech Solutions Pvt. Ltd.
+
+Job Summary:
+We are looking for a curious and driven Data Analyst to join our AI & Business Intelligence team. You will work closely with cross-functional teams to analyze data, create dashboards, and support decision-making. The ideal candidate is passionate about data, storytelling with insights, and has a strong desire to grow in the world of data science and AI products.
+
+Responsibilities:
+Analyze large datasets using Python, Excel, and SQL to derive actionable insights.
+
+Work with business teams to understand data needs and translate them into technical solutions.
+
+Build automated reports and dashboards using visualization tools (Tableau/Power BI).
+
+Collaborate with product and marketing teams to measure campaign effectiveness and user behavior.
+
+Assist in the development of ML/AI models by preparing clean and structured data.
+
+Present findings to non-technical stakeholders in a clear and impactful manner.
+
+Required Skills:
+Strong knowledge of Python (NumPy, Pandas) and SQL.
+
+Hands-on experience with data cleaning, exploratory data analysis (EDA), and visualization.
+
+Familiarity with machine learning concepts is a plus.
+
+Excellent communication skills and attention to detail.
+
+Basic understanding of business KPIs and data-driven decision making.
+
+Exposure to tools like Jupyter Notebook, Streamlit, or Excel PivotTables.
+
+Preferred Qualifications:
+Bachelor’s degree in Computer Science, Statistics, Engineering, or related field.
+
+Projects or internship experience in data analysis or AI/ML.
+
+Participation in competitions, open-source projects, or personal portfolio on GitHub.
+
+Bonus Points For:
+Experience working on resume screening, recruitment analytics, or HR tech.
+
+Knowledge of Spacy, scikit-learn, or transformers.
+
+Deployment of data products using Streamlit, Flask, or Docker.
