@@ -1,19 +1,15 @@
 import streamlit as st
 import os
-from AI_Resume_Optimizer.utils.resume_parser import parse_resume
-from AI_Resume_Optimizer.job_description_cleaner import clean_job_description
+
+from utils.resume_parser import parse_resume
+from utils.job_description_cleaner import clean_job_description
 from utils.similarity import calculate_similarity
-from AI_Resume_Optimizer.utils.resume_parser import parse_resume
 from utils.resume_scorer import score_resume
-from utils.feedback_generator import generate_feedback
-from job_description_cleaner import clean_job_description
-from similarity import calculate_similarity
-from resume_scorer import score_resume
-from score_feedback import generate_score_feedback
-from feedback_generator import generate_overall_feedback
-from grammar_check import check_grammar
-from linkedin_checker import check_linkedin
-from extract_text import extract_text_from_pdf
+from utils.feedback_generator import generate_feedback, generate_overall_feedback
+from utils.score_feedback import generate_score_feedback
+from utils.grammar_check import check_grammar
+from utils.linkedin_checker import check_linkedin
+from utils.extract_text import extract_text_from_pdf
 
 # --- Streamlit App Setup ---
 st.set_page_config(page_title="AI Resume Optimizer", layout="wide")
