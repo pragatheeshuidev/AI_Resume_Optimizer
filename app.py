@@ -5,7 +5,7 @@ import sys
 sys.path.append(os.path.abspath('.'))
 
 
-from utils.job_description_cleaner import clean_job_description
+
 from utils.similarity import calculate_similarity
 from utils.resume_scorer import score_resume
 from utils.feedback_generator import generate_feedback, generate_overall_feedback
