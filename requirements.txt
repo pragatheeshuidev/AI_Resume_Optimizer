@@ -4,26 +4,65 @@ numpy
 scikit-learn
 sentence-transformers
 python-docx
-pdfminer.six
+PyPDF2               # Crucial, as this was the missing module!
+pdfplumber           # For robust PDF text extraction
+PyMuPDF              # Another robust PDF text extraction library
+pdfminer.six         # Included as you listed it, though pdfplumber often replaces its direct use
 matplotlib
 seaborn
 nltk
 joblib
 textstat
-
-# Optional (recommended for Streamlit cloud compatibility)
 regex
-spacy
-tqdm
-streamlit
-pandas
-numpy
-python-docx
-pdfplumber
-PyMuPDF
-nltk
-textstat
-language-tool-python
-sentence-transformers
-scikit-learn
-fpdf  # Optional for PDF report export
+spacy                # Required for spacy usage
+tqdm                 # For progress bars
+language-tool-python # For grammar checking
+fpdf                 # For PDF report export (if you use this feature)
+Important Notes for Streamlit Cloud Deployment (especially for spacy and nltk):
+
+Spacy Model Download:
+Just listing spacy in requirements.txt installs the library, but it does not install the language models (e.g., en_core_web_sm). Your utils files (especially resume_parser or grammar_checker) might need a specific Spacy model.
+To ensure the model is available on Streamlit Cloud, you typically need to add code to your app.py or a utility function that runs once:
+
+Python
+
+# In app.py or a utility file that's imported early
+import spacy
+import streamlit as st
+
+@st.cache_resource # Caches the model download and loading
+def load_spacy_model(model_name="en_core_web_sm"):
+    try:
+        nlp = spacy.load(model_name)
+    except OSError:
+        # If model not found, download it
+        st.warning(f"Spacy model '{model_name}' not found. Downloading...")
+        spacy.cli.download(model_name)
+        nlp = spacy.load(model_name)
+    return nlp
+
+# Call this function early in your app.py if spacy is used
+# nlp = load_spacy_model()
+# Now you can use nlp for your spacy operations
+Replace "en_core_web_sm" with the actual model your application uses.
+
+NLTK Data Download:
+Similarly, if your nltk usage involves specific datasets (like punkt for tokenization, stopwords, wordnet, etc.), you'll need to download them programmatically in your code, ideally with caching:
+
+Python
+
+# In app.py or a utility file that's imported early
+import nltk
+import streamlit as st
+
+@st.cache_resource # Caches the download of NLTK data
+def download_nltk_data(data_list=['punkt', 'stopwords']):
+    for data_id in data_list:
+        try:
+            nltk.data.find(f'tokenizers/{data_id}')
+        except nltk.downloader.DownloadError:
+            st.warning(f"NLTK data '{data_id}' not found. Downloading...")
+            nltk.download(data_id)
+
+# Call this function early in your app.py if NLTK data is used
+# download_nltk_data()
