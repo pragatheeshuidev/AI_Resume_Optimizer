@@ -3,7 +3,8 @@ import os
 import sys
 
 sys.path.append(os.path.abspath('.'))
-
+from utils.resume_parser import parse_resume
+from utils.job_description_cleaner import clean_job_description
 
 
 from utils.similarity import calculate_similarity
