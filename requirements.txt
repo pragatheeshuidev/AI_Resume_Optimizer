@@ -15,3 +15,15 @@ textstat
 regex
 spacy
 tqdm
+streamlit
+pandas
+numpy
+python-docx
+pdfplumber
+PyMuPDF
+nltk
+textstat
+language-tool-python
+sentence-transformers
+scikit-learn
+fpdf  # Optional for PDF report export
